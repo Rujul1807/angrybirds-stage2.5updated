@@ -33,9 +33,11 @@ function setup(){
     box5 = new Box(810,160,70,70);
     log4 = new Log(760,120,150, PI/7);
     log5 = new Log(870,120,150, -PI/7);
-
+    log6=new Log(250,300,80,PI/2);
+    
     bird = new Bird(100,100);
-
+   chain=new Chain(bird.body,log6.body);  
+         
 }
 
 function draw(){
@@ -54,11 +56,15 @@ function draw(){
     box4.display();
     pig3.display();
     log3.display();
-
+    
     box5.display();
     log4.display();
     log5.display();
-
+     
     bird.display();
     platform.display();
+    log6.display();
+    //strokeWeight(4);
+   // line(bird.body.position.x,bird.body.position.y,log6.body.position.x,log6.body.position.y);
+   chain.display();
 }
